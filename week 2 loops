@@ -1,0 +1,43 @@
+/*var points = 0;
+var pointsReset = false;
+
+//write your code here
+
+let i = 1;
+
+for (let i = 0; i < 100 && points < 290; i++) {
+  // determines the number of turns starting from 0 - 100 & points  will be less than 290.
+  if (points == 125 && pointsReset === false) {
+    // looks to see if points are equal to 125 & pointsReset equals false.
+    points = 25;
+    pointsReset = true;
+  } else if (i % 2 == 0) {
+    // Checks to see if the number is even.
+    points = points + 5; // if the points appear even, add 5 points.
+  } else {
+    points = points + 3; // if the points are odd, add 3 points.
+  }
+  console.log("Turns: " + i + " Score: " + points);
+}
+*/
+
+var fs = require("fs");
+var input = fs.readFileSync(process.stdin.fd, "utf-8").trim().split("\n");
+
+var requiredCupsOfRice = parseInt(input[0]);
+var currentCupsOfRice = 0;
+
+//write your code here
+
+for (let i = 0; i <= requiredCupsOfRice; i++) {
+  // sets a range dependant on the requiredCupsOfRice variable
+  if (currentCupsOfRice < requiredCupsOfRice) {
+    // if current is less than required print line 35
+    currentCupsOfRice++; // increments each time the loop runs
+    console.log("The bowl contains " + currentCupsOfRice + " cups of rice.");
+  }
+  // once currrentCupsOfRice equals requiredCupsOfRice run line 39
+  else {
+    console.log("We have enough rice!");
+  }
+}
